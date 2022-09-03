@@ -78,6 +78,12 @@
       </section>
 
       <section>
+        <div id="news-container" class="p-5 bg-base-300 text-base-content mx-auto my-4">
+          <h3 id="category-found"></h3>
+        </div>
+      </section>
+
+      <section>
         <div id="news"></div>
       </section>
 
@@ -101,7 +107,7 @@
               class="btn btn-sm btn-circle absolute right-2 top-2"
               >✕</label
             >
-            <h3 id="modal-title" class="text-lg font-bold">Modal Title</h3>
+            <h3 id="modal-title" class="text-lg font-bold"></h3>
             <p class="py-4">
               You've been selected for a chance to get one year of subscription
               to use Wikipedia for free!
@@ -109,10 +115,14 @@
           </div>
         </div>
       </section>
+
+      <section class="flex justify-center my-5 hidden">
+        <div id="loader" class="radial-progress " style="--value: 100">100%</div>
+      </section>
     </main>
 
     <!--# Footer Section Start -->
-    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content mt-4"">
       <div>
         <p>Copyright © 2022 - All right reserved by Daily Moon.</p>
       </div>
