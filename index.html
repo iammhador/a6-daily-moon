@@ -14,7 +14,79 @@
     <!--# CSS File Link Here -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!--# Header Section Start -->
+    <header class="container w-11/12 mx-auto">
+      <div class="navbar bg-base-900">
+        <div class="flex-1">
+          <a href="index.html" class="btn btn-ghost normal-case text-xl"
+            >Daily Moon</a
+          >
+        </div>
+        <div class="flex-none">
+          <div class="dropdown dropdown-end">
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal p-0 mx-2">
+                <li><a>Home</a></li>
+                <li><a>Blog</a></li>
+              </ul>
+            </div>
+            <div
+              tabindex="0"
+              class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
+            >
+              <div class="card-body">
+                <span class="font-bold text-lg">8 Items</span>
+                <span class="text-info">Subtotal: $999</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="images/icons8-woman-60.png" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container flex">
+        <ul
+          id="menu"
+          tabindex="0"
+          class="menu menu-horizontal menu-normal mx-auto bg-base-100 px-5"
+        ></ul>
+      </section>
+
+      <section>
+        <div id="news"></div>
+      </section>
+
+      <section
+        id="news-info"
+        class="grid grid-cols-1 w-11/12 mx-auto"
+      ></section>
+    </main>
+  </body>
   <!--# JS File Link Here -->
   <script src="js/app.js"></script>
   <!--# Daisy UI JS File Link Here -->
