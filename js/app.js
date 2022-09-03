@@ -23,7 +23,7 @@ const menu = async () => {
 };
 
 const loadApiProduct = async () => {
-  const url = "https://openapi.programming-hero.com/api/news/category/05";
+  const url = "https://openapi.programming-hero.com/api/news/category/01";
   const res = await fetch(url);
   const data = await res.json();
   //   console.log(data.data);
@@ -41,9 +41,32 @@ const findProduct = async () => {
     <div class="card-body">
       <h2 class="card-title">${news.title}</h2>
       <p>${news.details.slice(0, 350)}</p>
-  </div>
-  </div>
+      <div class="grid grid-cols-3 gap-4 ">
+      <div class="flex">
+      <img class="w-1/3 rounded-full mr-2" src="${news.author.img}">
+      <div>
+      <p>${news.author.name}</p>
+      <p class="">${news.author.published_date}</p>
+      </div>
+      <div>
 
+      </div>
+      </div>
+
+      <div class="flex justify-center items-center">
+      <p class="flex justify-center items-center"><i class="fa-solid fa-eye mx-2"></i>  ${
+        news.total_view
+      }M</p> 
+      </div>
+
+      <div class="flex justify-center items-center">
+      <button ><i class="fa-solid fa-circle-right"></i></button> 
+      </div>
+      
+
+    </div>
+    
+    </div>
   `;
     divId.appendChild(createDiv);
   }
