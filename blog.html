@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Moon - Best Online News Portal All Over The Country</title>
+    <!--# Favicon Link Here -->
+    <link
+      rel="shortcut icon"
+      href="favicon/icons8-moon-96.png"
+      type="image/x-icon"
+    />
+    <!--# CSS File Link Here -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--# Header Section Start -->
+    <header class="container w-11/12 mx-auto">
+      <div class="navbar bg-base-900">
+        <div class="flex-1">
+          <a href="index.html" class="btn btn-ghost normal-case text-xl"
+            >Daily Moon</a
+          >
+        </div>
+        <div class="flex-none">
+          <div class="dropdown dropdown-end">
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal p-0 mx-2">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+              </ul>
+            </div>
+            <div
+              tabindex="0"
+              class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow"
+            >
+              <div class="card-body">
+                <span class="font-bold text-lg">8 Items</span>
+                <span class="text-info">Subtotal: $999</span>
+                <div class="card-actions">
+                  <button class="btn btn-primary btn-block">View cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="images/icons8-woman-60.png" />
+              </div>
+            </label>
+            <ul
+              tabindex="0"
+              class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--# Main Section Start -->
+    <main class="">
+      <section class="w-full">
+        <!-- # QUS 01 -->
+        <div class="card w-10/12 mx-auto bg-neutral text-neutral-content my-5">
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">
+              What is the difference between var, let and const ?
+            </h2>
+
+            <!--# Table -->
+            <div class="overflow-x-auto">
+              <table class="table w-9/12">
+                <!-- head -->
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Var</th>
+                    <th>Let</th>
+                    <th>Const</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- row 1 -->
+                  <tr class="hover">
+                    <th>1</th>
+                    <td>Functional scope</td>
+                    <td>Block scope</td>
+                    <td>Block scope</td>
+                  </tr>
+                  <!-- row 2 -->
+                  <tr class="hover">
+                    <th>2</th>
+                    <td>It can be updated and re-declared into the scope.</td>
+                    <td>
+                      and re-declared into the scope. It can be <br />
+                      updated but cannot be re-declared <br />
+                      into the scope.
+                    </td>
+                    <td>It cannot be updated or re-declared into the scope.</td>
+                  </tr>
+                  <!-- row 3 -->
+                  <tr class="hover">
+                    <th>3</th>
+                    <td>It can be declared without initialization.</td>
+                    <td>It can be declared without initialization.</td>
+                    <td>It cannot be declared without initialization.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- # QUS 02 -->
+        <div class="card w-10/12 mx-auto bg-neutral text-neutral-content my-5">
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">
+              What Is The Difference Between Arrow Function & Regular Function ?
+            </h2>
+            <p>
+              Regular functions created using function declarations or
+              expressions are constructible and callable. Since regular
+              functions are constructible, they can be called using the new
+              keyword. However, the arrow functions are only callable and not
+              constructible, arrow functions can never be used as constructor
+              functions.
+            </p>
+          </div>
+        </div>
+
+        <!-- # QUS 03 -->
+        <div class="card w-10/12 mx-auto bg-neutral text-neutral-content my-5">
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">
+              What Is The Difference Between Map, Foreach, Filter, Find ?
+            </h2>
+            <p>
+              Map : To use map, After calculating or after work done, the result
+              will store in new array .
+            </p>
+            <p>
+              Foreach : To use foreach, It will execute all the element of the
+              array element individually .
+            </p>
+            <p>
+              Filter : To use filter, Things will be filtrete, we get a matched
+              array property .
+            </p>
+            <p>
+              Find : To use find, We will get first value of the array property
+              .
+            </p>
+          </div>
+        </div>
+        <div class="card w-10/12 mx-auto bg-neutral text-neutral-content my-5">
+          <!--# QUS 4 -->
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Why Should We Use Template String ?</h2>
+            <p>
+              Template strings are a powerful feature of modern JavaScript
+              released in ES6. It lets us insert/interpolate variables and
+              expressions into strings without needing to concatenate like in
+              older versions of JavaScript. It allows us to create strings that
+              are complex and contain dynamic elements.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--# Footer Section Start -->
+    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+      <div>
+        <p>Copyright © 2022 - All right reserved by Daily Moon.</p>
+      </div>
+    </footer>
+
+    <!--# JS File Link Here -->
+    <script src="js/app.js"></script>
+    <!--# Daisy UI JS File Link Here -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
