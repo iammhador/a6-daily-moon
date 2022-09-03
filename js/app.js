@@ -68,9 +68,11 @@ const findProduct = async () => {
 };
 
 const menuProductShow = async (id) => {
-  const url = `https://openapi.programming-hero.com/api/news/category/{category_id}`;
+  const id0 = `0${id}`;
+  const url = `https://openapi.programming-hero.com/api/news/category/${id0}`;
   const res = await fetch(url);
   const data = await res.json();
+
   console.log(data);
 };
 // const modalInfoShow = async () => {
