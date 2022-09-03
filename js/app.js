@@ -15,7 +15,7 @@ const menu = async () => {
       const li = document.createElement("li");
       li.classList.add("no-underline");
       li.innerHTML = `
-              <a>${product.category_name}</a>
+              <a onclick="menuProductShow(${product.category_id})">${product.category_name}</a>
               `;
       menu.appendChild(li);
     }
@@ -49,10 +49,8 @@ const findProduct = async () => {
       <p class="">${news.author.published_date}</p>
       </div>
       <div>
-
       </div>
       </div>
-
       <div class="flex justify-center items-center">
       <p class="flex justify-center items-center"><i class="fa-solid fa-eye mx-2"></i>  ${
         news.total_view
@@ -60,19 +58,31 @@ const findProduct = async () => {
       </div>
 
       <div class="flex justify-center items-center">
-      <button ><i class="fa-solid fa-circle-right"></i></button> 
+      <label for="my-modal-3" class="btn modal-button border-none bg-base-100"> <i class="fa-solid fa-circle-right"></i> </label>
       </div>
-      
-
     </div>
-    
     </div>
   `;
     divId.appendChild(createDiv);
   }
 };
 
+const menuProductShow = async (id) => {
+  const url = `https://openapi.programming-hero.com/api/news/category/{category_id}`;
+  const res = await fetch(url);
+  const data = await res.json();
+  console.log(data);
+};
+// const modalInfoShow = async () => {
+//   const productDetail = await loadApiProduct();
+//   productDetail.forEach((product) => {
+//     console.log(product);
+//     const modalTitle = document.getElementById("modal-title");
+//     modalTitle.innerText = product.author.name;
+//   });
+// };
 loadMenu();
 menu();
 loadApiProduct();
 findProduct();
+// modalInfoShow();
