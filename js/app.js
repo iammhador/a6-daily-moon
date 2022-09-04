@@ -1,8 +1,12 @@
 const loadMenu = async () => {
   const url = "https://openapi.programming-hero.com/api/news/categories";
-  const res = await fetch(url);
-  const data = await res.json();
-  menu(data.data.news_category);
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    menu(data.data.news_category);
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 const menu = (news) => {
@@ -20,15 +24,16 @@ const menu = (news) => {
 
 const menuProductShow = async (id, name) => {
   const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
-  const res = await fetch(url);
-  const data = await res.json();
-  showProduct(data.data, name);
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
+    showProduct(data.data, name);
+  } catch (error) {
+    console.log(erro);
+  }
 };
 
 const showProduct = (data, name) => {
-  const newsContainer = document.getElementById("news-container");
-  newsContainer.innerHTML = "";
-
   const categoryLength = document.getElementById("categoryLength");
   categoryLength.innerText = data.length;
   const catId = document.getElementById("catId");
@@ -43,8 +48,8 @@ const showProduct = (data, name) => {
     // console.log(product);
     const createDiv = document.createElement("div");
     createDiv.innerHTML = `
-      <div class="card card-side bg-pink-900 shadow-xl my-4">
-      <img class="w-1/2" src="${
+      <div class="card card-side bg-white text-black shadow-xl my-4">
+      <img class="w-6/12" src="${
         product.image_url ? product.image_url : "No Image Found"
       }" alt="Movie">
       <div class="card-body">
@@ -76,13 +81,13 @@ const showProduct = (data, name) => {
         }M</p>
         </div>
 
-        <div class="flex justify-center items-center">
+        <div class="flex justify-center items-center ">
           <label onclick="modalProduct('${product._id}')"
             for="my-modal-3"
-            class="btn modal-button border-none pink-900"
+            class="btn modal-button border-none bg-white"
           >
-            <a> Details </a>
-          </label>;
+          <i class="fa-sharp fa-solid fa-arrow-right "></i>
+          </label>
         
         </div>
       </div>
